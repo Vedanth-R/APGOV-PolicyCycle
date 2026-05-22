@@ -15,6 +15,8 @@
     <nav>
       <a href="#cycle">Cycle</a>
       <a href="#timeline">Timeline</a>
+      <a href="#game">Game</a>
+      <a href="#conflicts">Conflicts</a>
       <a href="#actors">Actors</a>
       <a href="#sources">Sources</a>
     </nav>
@@ -61,37 +63,22 @@
 
     <section id="cycle" class="cycle-section" aria-labelledby="cycle-title">
       <div class="section-heading">
-        <p class="kicker">Interactive map</p>
-        <h2 id="cycle-title">Click a Stage in the Policymaking Cycle</h2>
-        <p>Each stage answers an AP Gov-style question: what happened, who acted, which institution mattered, and how conflict shaped the result.</p>
+        <p class="kicker">Interactive control room</p>
+        <h2 id="cycle-title">Click a Console in the AI Policy Control Room</h2>
+        <p>Each console updates the briefing screen with what happened, who acted, the institution involved, the tension, and a source trail.</p>
       </div>
 
-      <div class="cycle-layout">
+      <div class="cycle-layout control-room">
         <div class="cycle-wheel" aria-label="Policy cycle stage selector">
-          <button class="cycle-node agenda active" data-stage="agenda">
-            <span>1</span>
-            Agenda
-          </button>
-          <button class="cycle-node formulation" data-stage="formulation">
-            <span>2</span>
-            Formulation
-          </button>
-          <button class="cycle-node adoption" data-stage="adoption">
-            <span>3</span>
-            Adoption
-          </button>
-          <button class="cycle-node implementation" data-stage="implementation">
-            <span>4</span>
-            Implementation
-          </button>
-          <button class="cycle-node evaluation" data-stage="evaluation">
-            <span>5</span>
-            Evaluation
-          </button>
+          <button class="cycle-node agenda active" data-stage="agenda"><span>1</span>Agenda</button>
+          <button class="cycle-node formulation" data-stage="formulation"><span>2</span>Formulation</button>
+          <button class="cycle-node adoption" data-stage="adoption"><span>3</span>Adoption</button>
+          <button class="cycle-node implementation" data-stage="implementation"><span>4</span>Implementation</button>
+          <button class="cycle-node evaluation" data-stage="evaluation"><span>5</span>Evaluation</button>
           <div class="cycle-core">
             <span>AI</span>
-            <strong>Policy</strong>
-            <small>2025-26</small>
+            <strong>Control</strong>
+            <small>Room</small>
           </div>
         </div>
 
@@ -101,20 +88,27 @@
             <span id="stageDate">May-July 2025</span>
           </div>
           <h3 id="stageTitle">How did AI become important?</h3>
-          <p id="stageSummary"></p>
-          <div class="panel-grid">
+          <div class="briefing-screen">
             <div>
-              <h4>Key Players</h4>
-              <ul id="stagePlayers"></ul>
+              <h4>What happened</h4>
+              <p id="stageWhat"></p>
             </div>
             <div>
-              <h4>Institutional Route</h4>
-              <ul id="stageInstitutions"></ul>
+              <h4>Who acted</h4>
+              <p id="stageWho"></p>
+            </div>
+            <div>
+              <h4>Institution involved</h4>
+              <p id="stageInstitution"></p>
+            </div>
+            <div>
+              <h4>Conflict / tension</h4>
+              <p id="stageTension"></p>
             </div>
           </div>
           <div class="contest-card">
-            <span>Contested Question</span>
-            <p id="stageContest"></p>
+            <span>Evidence / source</span>
+            <p id="stageEvidence"></p>
           </div>
         </article>
       </div>
@@ -137,42 +131,140 @@
       <div id="timelineList" class="timeline-list"></div>
     </section>
 
+    <section id="game" class="game-section" aria-labelledby="game-title">
+      <div class="section-heading">
+        <p class="kicker">Civics simulation</p>
+        <h2 id="game-title">Choose the Policymaker</h2>
+        <p>Read the event, decide who responded first, then see why that institution fits the AP Gov concept.</p>
+      </div>
+      <div class="game-board">
+        <article class="question-card">
+          <div class="panel-topline">
+            <span id="questionCounter">Question 1 of 6</span>
+            <span id="questionConcept">Agenda setting</span>
+          </div>
+          <h3 id="questionPrompt"></h3>
+          <div class="choice-grid" aria-label="Policymaker choices">
+            <button class="choice" data-choice="Congress">Congress</button>
+            <button class="choice" data-choice="President">President</button>
+            <button class="choice" data-choice="FTC">FTC</button>
+            <button class="choice" data-choice="State government">State government</button>
+            <button class="choice" data-choice="Courts">Courts</button>
+            <button class="choice" data-choice="Tech company">Tech company</button>
+          </div>
+          <div id="gameFeedback" class="game-feedback" aria-live="polite"></div>
+          <button id="nextQuestion" class="primary-action game-next" type="button">Next scenario</button>
+        </article>
+        <aside class="score-card">
+          <span>Score</span>
+          <strong id="scoreValue">0 / 0</strong>
+          <p>Tip: think about whether the response was lawmaking, executive agenda-setting, agency enforcement, state experimentation, private compliance, or judicial review.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="conflicts" class="conflict-section" aria-labelledby="conflict-title">
+      <div class="section-heading">
+        <p class="kicker">Policy conflict cards</p>
+        <h2 id="conflict-title">Flip the Tensions</h2>
+        <p>Click each card to see a concrete example from the AI policy fight.</p>
+      </div>
+      <div class="conflict-grid">
+        <button class="flip-card" type="button">
+          <span class="front">Innovation vs. Safety</span>
+          <span class="back">The AI Action Plan pushed acceleration, while California SB 53 emphasized frontier-model transparency and whistleblower protections.</span>
+        </button>
+        <button class="flip-card" type="button">
+          <span class="front">Federal Power vs. State Power</span>
+          <span class="back">The December 2025 national framework order challenged state AI rules that the White House saw as barriers to national AI leadership.</span>
+        </button>
+        <button class="flip-card" type="button">
+          <span class="front">Free Speech vs. Harm Prevention</span>
+          <span class="back">The TAKE IT DOWN Act targeted deepfake abuse, but critics worried fast takedown rules could remove lawful speech.</span>
+        </button>
+        <button class="flip-card" type="button">
+          <span class="front">Copyright Owners vs. AI Companies</span>
+          <span class="back">Courts and the Copyright Office wrestled with whether AI training is fair use and whether pirated data changes the answer.</span>
+        </button>
+        <button class="flip-card" type="button">
+          <span class="front">National Security vs. Open AI Development</span>
+          <span class="back">Federal policy promoted U.S. AI leadership and infrastructure while still worrying about model misuse, foreign competition, and security controls.</span>
+        </button>
+      </div>
+    </section>
+
     <section id="actors" class="actors-section" aria-labelledby="actors-title">
       <div class="section-heading">
         <p class="kicker">Who did what?</p>
         <h2 id="actors-title">Institution Dashboard</h2>
-        <p>Use this as the quick civics translation: each actor is tied to the constitutional or bureaucratic route it used.</p>
+        <p>Click an actor box to expand its AP Gov breakdown.</p>
       </div>
       <div class="actor-grid">
-        <article>
+        <article class="actor-card" tabindex="0">
           <span class="actor-icon">WH</span>
           <h3>President & White House</h3>
           <p>Set the federal agenda through executive orders, the AI Action Plan, procurement priorities, and a push for a national framework.</p>
+          <div class="actor-details">
+            <p><strong>Power used:</strong> Executive orders and administrative leadership.</p>
+            <p><strong>Example action:</strong> EO 14179 and America's AI Action Plan.</p>
+            <p><strong>AP Gov concept:</strong> Executive agenda setting.</p>
+            <p><strong>Limitation:</strong> Courts, Congress, agencies, and states can resist or narrow the policy.</p>
+          </div>
         </article>
-        <article>
+        <article class="actor-card" tabindex="0">
           <span class="actor-icon">C</span>
           <h3>Congress</h3>
           <p>Adopted a targeted statutory response to deepfake abuse through the TAKE IT DOWN Act, while broader AI preemption remained contested.</p>
+          <div class="actor-details">
+            <p><strong>Power used:</strong> Lawmaking.</p>
+            <p><strong>Example action:</strong> TAKE IT DOWN Act.</p>
+            <p><strong>AP Gov concept:</strong> Legislative process and compromise.</p>
+            <p><strong>Limitation:</strong> Gridlock often produces narrow bills instead of comprehensive regulation.</p>
+          </div>
         </article>
-        <article>
+        <article class="actor-card" tabindex="0">
           <span class="actor-icon">A</span>
           <h3>Agencies</h3>
           <p>OMB, NIST, FTC, Commerce, Copyright Office, and other agencies translated broad policy into guidance, standards, enforcement, and reports.</p>
+          <div class="actor-details">
+            <p><strong>Power used:</strong> Rule implementation, guidance, enforcement, and expertise.</p>
+            <p><strong>Example action:</strong> FTC enforcement of TAKE IT DOWN obligations; OMB AI use guidance.</p>
+            <p><strong>AP Gov concept:</strong> Bureaucratic discretion.</p>
+            <p><strong>Limitation:</strong> Agencies depend on statutory authority, budgets, and presidential priorities.</p>
+          </div>
         </article>
-        <article>
+        <article class="actor-card" tabindex="0">
           <span class="actor-icon">S</span>
           <h3>States</h3>
           <p>California, Colorado, and many other states tried to fill gaps with transparency, safety, discrimination, and consumer-protection rules.</p>
+          <div class="actor-details">
+            <p><strong>Power used:</strong> State police powers and consumer protection authority.</p>
+            <p><strong>Example action:</strong> California SB 53 and Colorado AI Act implementation planning.</p>
+            <p><strong>AP Gov concept:</strong> Federalism and policy laboratories.</p>
+            <p><strong>Limitation:</strong> Federal preemption and interstate commerce arguments can limit state rules.</p>
+          </div>
         </article>
-        <article>
+        <article class="actor-card" tabindex="0">
           <span class="actor-icon">J</span>
           <h3>Courts</h3>
           <p>Federal judges shaped the policy environment through copyright and fair-use decisions, especially around training data and pirated copies.</p>
+          <div class="actor-details">
+            <p><strong>Power used:</strong> Judicial interpretation.</p>
+            <p><strong>Example action:</strong> AI copyright fair-use rulings.</p>
+            <p><strong>AP Gov concept:</strong> Judicial review and precedent.</p>
+            <p><strong>Limitation:</strong> Courts decide cases after disputes arise and usually move slowly.</p>
+          </div>
         </article>
-        <article>
+        <article class="actor-card" tabindex="0">
           <span class="actor-icon">P</span>
           <h3>Public & Interest Groups</h3>
           <p>Victims, creators, tech firms, civil-liberties groups, labor advocates, and state leaders pushed different problem definitions and solutions.</p>
+          <div class="actor-details">
+            <p><strong>Power used:</strong> Lobbying, public pressure, litigation, and expertise.</p>
+            <p><strong>Example action:</strong> Victim advocacy helped move deepfake legislation; industry groups pushed innovation arguments.</p>
+            <p><strong>AP Gov concept:</strong> Linkage institutions and pluralism.</p>
+            <p><strong>Limitation:</strong> Unequal resources affect whose voice reaches policymakers.</p>
+          </div>
         </article>
       </div>
     </section>
@@ -195,6 +287,27 @@
           <h3>Contested</h3>
           <p>State authority, copyright liability, speech concerns, civil-rights safeguards, and AI model neutrality all remained live fights.</p>
         </article>
+      </div>
+      <div class="success-meter">
+        <label for="successSlider">How successful was the government response?</label>
+        <input id="successSlider" type="range" min="1" max="5" value="3" step="1">
+        <div class="meter-labels" aria-hidden="true">
+          <span>1 Failed</span>
+          <span>2 Symbolic</span>
+          <span>3 Partial</span>
+          <span>4 Contested</span>
+          <span>5 Strong</span>
+        </div>
+        <button id="submitVote" class="primary-action vote-button" type="button">Submit vote</button>
+        <p id="voteStatus" class="vote-status" aria-live="polite">No votes submitted yet.</p>
+        <article id="successArgument" class="success-argument" aria-live="polite"></article>
+        <div class="vote-results" aria-live="polite">
+          <div class="result-header">
+            <h3>Class Tally</h3>
+            <p id="voteSummary">No votes yet.</p>
+          </div>
+          <div id="voteBars" class="vote-bars"></div>
+        </div>
       </div>
     </section>
 
@@ -220,6 +333,7 @@
 
   <footer>
     <p>First interactive draft for AP Government. Last updated May 2026.</p>
+    <button id="clearVotes" class="clear-votes" type="button">Clear votes</button>
   </footer>
 
   <script src="script.js"></script>

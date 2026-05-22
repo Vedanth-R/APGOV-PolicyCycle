@@ -7,7 +7,6 @@
   --teal: #16a6a3;
   --amber: #f3a83c;
   --red: #d64b45;
-  --blue: #3a6ea5;
   --green: #4c956c;
   --line: rgba(16, 32, 39, 0.16);
   --shadow: 0 22px 70px rgba(11, 25, 35, 0.18);
@@ -212,11 +211,8 @@ button {
 .briefing-band,
 .cycle-section,
 .timeline-section,
-<<<<<<< HEAD
 .game-section,
 .conflict-section,
-=======
->>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 .actors-section,
 .outcome-section,
 .sources-section {
@@ -240,7 +236,8 @@ button {
 .briefing-band span,
 .contest-card span,
 .panel-topline,
-.timeline-card span {
+.timeline-card span,
+.score-card span {
   color: var(--muted);
   font-size: 0.78rem;
   font-weight: 800;
@@ -271,19 +268,14 @@ button {
   line-height: 1.65;
 }
 
-<<<<<<< HEAD
 .cycle-layout,
 .game-board {
-=======
-.cycle-layout {
->>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
   display: grid;
   grid-template-columns: minmax(330px, 0.9fr) minmax(320px, 1.1fr);
   gap: clamp(28px, 5vw, 72px);
   align-items: center;
 }
 
-<<<<<<< HEAD
 .control-room {
   position: relative;
 }
@@ -296,8 +288,6 @@ button {
   pointer-events: none;
 }
 
-=======
->>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 .cycle-wheel {
   position: relative;
   aspect-ratio: 1;
@@ -366,7 +356,10 @@ button {
   margin-top: -14px;
 }
 
-.stage-panel {
+.stage-panel,
+.question-card,
+.score-card,
+.success-meter {
   border: 3px solid var(--ink);
   background: var(--panel);
   padding: clamp(24px, 4vw, 40px);
@@ -379,7 +372,8 @@ button {
   gap: 18px;
 }
 
-.stage-panel h3 {
+.stage-panel h3,
+.question-card h3 {
   margin: 18px 0 10px;
   font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1.03;
@@ -388,12 +382,12 @@ button {
 .stage-panel p,
 .stage-panel li,
 .actor-grid p,
-.outcome-grid p {
+.outcome-grid p,
+.score-card p {
   color: var(--muted);
   line-height: 1.62;
 }
 
-<<<<<<< HEAD
 .briefing-screen {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -415,21 +409,6 @@ button {
 
 .briefing-screen p {
   margin-bottom: 0;
-=======
-.panel-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-  margin-top: 22px;
-}
-
-.panel-grid h4 {
-  margin: 0;
-}
-
-.panel-grid ul {
-  padding-left: 20px;
->>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 }
 
 .contest-card {
@@ -491,24 +470,9 @@ button {
   font-weight: 900;
 }
 
-<<<<<<< HEAD
 .game-section,
 .outcome-section {
   background: #eaf4f1;
-}
-
-.question-card,
-.score-card,
-.success-meter {
-  border: 3px solid var(--ink);
-  background: var(--panel);
-  padding: clamp(22px, 4vw, 34px);
-  box-shadow: 8px 8px 0 var(--ink);
-}
-
-.question-card h3 {
-  font-size: clamp(1.45rem, 3vw, 2.4rem);
-  line-height: 1.12;
 }
 
 .choice-grid {
@@ -570,23 +534,11 @@ button {
   align-self: stretch;
 }
 
-.score-card span {
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
 .score-card strong {
   display: block;
   margin: 10px 0 16px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.5rem, 6vw, 4rem);
-}
-
-.score-card p {
-  color: var(--muted);
-  line-height: 1.6;
 }
 
 .conflict-grid {
@@ -644,8 +596,6 @@ button {
   transform: translateY(0);
 }
 
-=======
->>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 .actor-grid,
 .outcome-grid {
   display: grid;
@@ -653,11 +603,7 @@ button {
   gap: 18px;
 }
 
-<<<<<<< HEAD
 .actor-card,
-=======
-.actor-grid article,
->>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 .outcome-grid article {
   border: 2px solid var(--ink);
   background: var(--panel);
@@ -665,7 +611,6 @@ button {
   box-shadow: 6px 6px 0 rgba(16, 32, 39, 0.16);
 }
 
-<<<<<<< HEAD
 .actor-card {
   cursor: pointer;
 }
@@ -676,14 +621,11 @@ button {
   box-shadow: 8px 8px 0 var(--ink);
 }
 
-=======
->>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 .actor-grid h3,
 .outcome-grid h3 {
   margin-bottom: 8px;
 }
 
-<<<<<<< HEAD
 .actor-details {
   display: none;
   margin-top: 16px;
@@ -716,6 +658,17 @@ button {
   accent-color: var(--teal);
 }
 
+.vote-button {
+  margin: 8px 0 10px;
+  color: var(--ink);
+}
+
+.vote-status {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
 .meter-labels {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -742,8 +695,57 @@ button {
   line-height: 1.6;
 }
 
-=======
->>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
+.vote-results {
+  margin-top: 18px;
+  border: 2px solid var(--ink);
+  background: #fffdf7;
+  padding: 18px;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+
+.result-header h3 {
+  margin: 0;
+}
+
+.result-header p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.vote-bars {
+  display: grid;
+  gap: 10px;
+}
+
+.vote-row {
+  display: grid;
+  grid-template-columns: 24px 1fr 36px;
+  gap: 10px;
+  align-items: center;
+  font-weight: 900;
+}
+
+.bar-track {
+  height: 18px;
+  border: 2px solid var(--ink);
+  background: white;
+}
+
+.bar-fill {
+  height: 100%;
+  min-width: 0;
+  background: var(--teal);
+  transition: width 0.2s ease;
+}
+
 .source-columns {
   columns: 2;
   column-gap: 32px;
@@ -758,9 +760,26 @@ button {
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   padding: 28px clamp(18px, 5vw, 72px);
   background: var(--ink);
   color: white;
+}
+
+.clear-votes {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.46);
+  padding: 8px 10px;
+  font-size: 0.74rem;
+}
+
+.clear-votes:hover {
+  color: white;
+  border-color: white;
 }
 
 @media (max-width: 900px) {
@@ -784,17 +803,11 @@ footer {
   .stage-dock,
   .briefing-band,
   .cycle-layout,
-<<<<<<< HEAD
   .game-board,
   .briefing-screen,
   .actor-grid,
   .outcome-grid,
   .conflict-grid {
-=======
-  .panel-grid,
-  .actor-grid,
-  .outcome-grid {
->>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
     grid-template-columns: 1fr;
   }
 
@@ -808,7 +821,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-<<<<<<< HEAD
   .choice-grid {
     grid-template-columns: 1fr;
   }
@@ -817,8 +829,12 @@ footer {
     grid-template-columns: 1fr;
   }
 
-=======
->>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
+  .result-header,
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .source-columns {
     columns: 1;
   }
