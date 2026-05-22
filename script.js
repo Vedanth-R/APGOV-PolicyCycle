@@ -3,56 +3,101 @@ const stages = {
     label: "Agenda Setting",
     date: "May-July 2025",
     title: "How did AI become important?",
+<<<<<<< HEAD
     what:
       "AI rose on the agenda because deepfake abuse, copyright lawsuits, federal AI procurement, frontier-model safety, state regulation, and competition with China all became public problems at once.",
     who: "Victims and families, creators, tech firms, state lawmakers, federal advisers, and journalists pushed AI from a technical issue into a public policy issue.",
     institution: "Media attention, public pressure, Congress, state legislatures, and the White House all helped define the problem.",
     tension: "Was AI mainly an innovation race needing fewer barriers, or a fast-moving risk needing enforceable guardrails?",
     evidence: "Source trail: EO 14179, the White House AI Action Plan, TAKE IT DOWN Act coverage, and state AI bills."
+=======
+    summary:
+      "AI rose on the agenda because several public problems converged: deepfake abuse, copyright lawsuits, federal agencies wanting to buy AI tools, safety worries around frontier models, and pressure to beat China in AI infrastructure and standards.",
+    players: ["Victims and families affected by deepfakes", "Tech companies and creators", "White House AI advisers", "State lawmakers"],
+    institutions: ["Public opinion and media attention", "Congressional hearings and bills", "Executive orders", "State legislatures"],
+    contest:
+      "Was AI mainly an innovation race needing fewer barriers, or a fast-moving risk needing enforceable guardrails?"
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
   },
   formulation: {
     label: "Policy Formulation",
     date: "Jan-Sept 2025",
     title: "Who proposed solutions?",
+<<<<<<< HEAD
     what:
       "Different institutions proposed different fixes: the White House proposed acceleration and federal coordination, Congress targeted deepfake abuse, agencies wrote guidance, and states proposed transparency and safety duties.",
     who: "The President, White House AI advisers, members of Congress, OMB, NIST, FTC, Commerce, California, and Colorado all shaped the menu of solutions.",
     institution: "Executive planning, congressional bill drafting, agency expertise, and state policy experimentation.",
     tension: "Should the federal government create one national rulebook, or should states experiment with stronger rules while Congress moves slowly?",
     evidence: "Source trail: AI Action Plan, OMB M-25-21, NIST AI work, California SB 53 materials, and Colorado AI Act reporting."
+=======
+    summary:
+      "The White House framed a broad pro-innovation federal strategy, Congress focused on a specific deepfake harm, agencies drafted procurement and governance guidance, and states proposed transparency, safety, and anti-discrimination rules.",
+    players: ["President and White House policy staff", "Senators and House members", "OMB, NIST, FTC, Commerce", "California and Colorado lawmakers"],
+    institutions: ["Executive branch planning", "Congressional bill drafting", "Agency guidance", "State policy labs"],
+    contest:
+      "Should the federal government set one national rulebook, or should states experiment with stronger rules while Congress moves slowly?"
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
   },
   adoption: {
     label: "Policy Adoption",
     date: "May-Dec 2025",
     title: "What institutions adopted policy?",
+<<<<<<< HEAD
     what:
       "Congress and the President enacted the TAKE IT DOWN Act, a targeted law against nonconsensual intimate imagery and AI deepfakes. California adopted SB 53, and the White House adopted a national AI framework strategy.",
     who: "Congress, the President, California's governor and legislature, and White House policy officials.",
     institution: "Statutes, executive orders, state legislation, and national policy plans.",
     tension: "The TAKE IT DOWN Act passed because it focused on a specific harm. Broader AI regulation remained harder because it raised bigger fights over innovation, speech, federalism, and industry power.",
     evidence: "Source trail: White House TAKE IT DOWN Act release, California SB 53 signing notice, and December 2025 national framework fact sheet."
+=======
+    summary:
+      "Congress and the President enacted the TAKE IT DOWN Act. California adopted SB 53 for frontier AI transparency. The White House adopted the AI Action Plan and later an executive order seeking a national framework that could limit conflicting state rules.",
+    players: ["Congress", "President", "California Governor and legislature", "White House and Commerce Department"],
+    institutions: ["Statutes", "Executive orders", "State legislation", "Federal policy plans"],
+    contest:
+      "The same period produced bipartisan action on deepfakes and intense conflict over whether state AI laws should be preempted."
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
   },
   implementation: {
     label: "Implementation",
     date: "2025-2026",
     title: "Who carried it out?",
+<<<<<<< HEAD
     what:
       "Implementation moved to agencies and regulated platforms: OMB shaped federal AI use, NIST worked on standards, FTC prepared TAKE IT DOWN enforcement, and states planned compliance systems.",
     who: "OMB, agency Chief AI Officers, FTC, NIST, Commerce, online platforms, state regulators, and state attorneys general.",
     institution: "Bureaucracy: agency memos, compliance plans, enforcement letters, standards, procurement rules, and platform takedown systems.",
     tension: "Implementation is where broad goals meet deadlines, definitions, capacity, and legal authority. That is where many AI policies either become real or get narrowed.",
     evidence: "Source trail: OMB M-25-21, NIST AI page, FTC TAKE IT DOWN enforcement guidance, and agency compliance plans."
+=======
+    summary:
+      "Implementation shifted to agencies and regulated platforms: OMB set rules for federal AI use, NIST continued standards work, FTC prepared TAKE IT DOWN enforcement, and states planned compliance systems for transparency and high-risk AI requirements.",
+    players: ["OMB agency CIOs and CAIOs", "FTC", "NIST and Commerce", "Online platforms", "State attorneys general and regulators"],
+    institutions: ["Federal agency compliance plans", "Standards and guidance", "Platform takedown systems", "State enforcement regimes"],
+    contest:
+      "Implementation is where broad goals meet capacity, definitions, deadlines, and legal authority. That is where many AI policies either become real or get narrowed."
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
   },
   evaluation: {
     label: "Evaluation & Feedback",
     date: "2025-2026",
     title: "Was the policy contested?",
+<<<<<<< HEAD
     what:
       "Courts, agencies, and state-federal clashes created feedback. Copyright cases tested fair use. Civil-liberties groups criticized takedown rules. States resisted federal preemption.",
     who: "Federal judges, authors, AI companies, civil-liberties groups, state leaders, Congress, and federal agencies.",
     institution: "District courts, the Copyright Office, FTC enforcement, federalism disputes, and congressional oversight.",
     tension: "Evaluation is unfinished: the next cycle will likely turn on lawsuits, enforcement outcomes, and whether Congress passes a broader national AI statute.",
     evidence: "Source trail: U.S. Copyright Office AI report, Anthropic fair-use decision coverage, FTC guidance, and state-federal AI framework disputes."
+=======
+    summary:
+      "Courts, agencies, and state-federal clashes provided feedback. AI copyright cases tested fair use. Civil-liberties groups criticized takedown rules. States resisted federal preemption. Agencies had to show whether federal AI adoption could be fast and trustworthy.",
+    players: ["Federal judges", "Authors and AI companies", "Civil-liberties groups", "State leaders", "Federal agencies"],
+    institutions: ["District courts", "Copyright Office reports", "FTC enforcement", "Federalism disputes", "Congressional oversight"],
+    contest:
+      "Evaluation is still unfinished: the next policy cycle will likely turn on lawsuits, enforcement outcomes, and whether Congress passes a broader national AI statute."
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
   }
 };
 
@@ -105,22 +150,36 @@ const stageButtons = document.querySelectorAll("[data-stage]");
 const stageLabel = document.querySelector("#stageLabel");
 const stageDate = document.querySelector("#stageDate");
 const stageTitle = document.querySelector("#stageTitle");
+<<<<<<< HEAD
 const stageWhat = document.querySelector("#stageWhat");
 const stageWho = document.querySelector("#stageWho");
 const stageInstitution = document.querySelector("#stageInstitution");
 const stageTension = document.querySelector("#stageTension");
 const stageEvidence = document.querySelector("#stageEvidence");
+=======
+const stageSummary = document.querySelector("#stageSummary");
+const stagePlayers = document.querySelector("#stagePlayers");
+const stageInstitutions = document.querySelector("#stageInstitutions");
+const stageContest = document.querySelector("#stageContest");
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 
 function renderStage(stageKey) {
   const stage = stages[stageKey];
   stageLabel.textContent = stage.label;
   stageDate.textContent = stage.date;
   stageTitle.textContent = stage.title;
+<<<<<<< HEAD
   stageWhat.textContent = stage.what;
   stageWho.textContent = stage.who;
   stageInstitution.textContent = stage.institution;
   stageTension.textContent = stage.tension;
   stageEvidence.textContent = stage.evidence;
+=======
+  stageSummary.textContent = stage.summary;
+  stagePlayers.innerHTML = stage.players.map((item) => `<li>${item}</li>`).join("");
+  stageInstitutions.innerHTML = stage.institutions.map((item) => `<li>${item}</li>`).join("");
+  stageContest.textContent = stage.contest;
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 
   stageButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.stage === stageKey);
@@ -165,6 +224,7 @@ filterButtons.forEach((button) => {
 
 renderStage("agenda");
 renderTimeline();
+<<<<<<< HEAD
 
 const gameQuestions = [
   {
@@ -312,3 +372,5 @@ function renderSuccessArgument() {
 successSlider.addEventListener("input", renderSuccessArgument);
 renderQuestion();
 renderSuccessArgument();
+=======
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f

@@ -212,8 +212,11 @@ button {
 .briefing-band,
 .cycle-section,
 .timeline-section,
+<<<<<<< HEAD
 .game-section,
 .conflict-section,
+=======
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 .actors-section,
 .outcome-section,
 .sources-section {
@@ -268,14 +271,19 @@ button {
   line-height: 1.65;
 }
 
+<<<<<<< HEAD
 .cycle-layout,
 .game-board {
+=======
+.cycle-layout {
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
   display: grid;
   grid-template-columns: minmax(330px, 0.9fr) minmax(320px, 1.1fr);
   gap: clamp(28px, 5vw, 72px);
   align-items: center;
 }
 
+<<<<<<< HEAD
 .control-room {
   position: relative;
 }
@@ -288,6 +296,8 @@ button {
   pointer-events: none;
 }
 
+=======
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 .cycle-wheel {
   position: relative;
   aspect-ratio: 1;
@@ -383,6 +393,7 @@ button {
   line-height: 1.62;
 }
 
+<<<<<<< HEAD
 .briefing-screen {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -404,6 +415,21 @@ button {
 
 .briefing-screen p {
   margin-bottom: 0;
+=======
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.panel-grid h4 {
+  margin: 0;
+}
+
+.panel-grid ul {
+  padding-left: 20px;
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 }
 
 .contest-card {
@@ -465,6 +491,7 @@ button {
   font-weight: 900;
 }
 
+<<<<<<< HEAD
 .game-section,
 .outcome-section {
   background: #eaf4f1;
@@ -617,6 +644,8 @@ button {
   transform: translateY(0);
 }
 
+=======
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 .actor-grid,
 .outcome-grid {
   display: grid;
@@ -624,7 +653,11 @@ button {
   gap: 18px;
 }
 
+<<<<<<< HEAD
 .actor-card,
+=======
+.actor-grid article,
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 .outcome-grid article {
   border: 2px solid var(--ink);
   background: var(--panel);
@@ -632,6 +665,7 @@ button {
   box-shadow: 6px 6px 0 rgba(16, 32, 39, 0.16);
 }
 
+<<<<<<< HEAD
 .actor-card {
   cursor: pointer;
 }
@@ -642,11 +676,14 @@ button {
   box-shadow: 8px 8px 0 var(--ink);
 }
 
+=======
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 .actor-grid h3,
 .outcome-grid h3 {
   margin-bottom: 8px;
 }
 
+<<<<<<< HEAD
 .actor-details {
   display: none;
   margin-top: 16px;
@@ -705,6 +742,8 @@ button {
   line-height: 1.6;
 }
 
+=======
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
 .source-columns {
   columns: 2;
   column-gap: 32px;
@@ -745,11 +784,17 @@ footer {
   .stage-dock,
   .briefing-band,
   .cycle-layout,
+<<<<<<< HEAD
   .game-board,
   .briefing-screen,
   .actor-grid,
   .outcome-grid,
   .conflict-grid {
+=======
+  .panel-grid,
+  .actor-grid,
+  .outcome-grid {
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
     grid-template-columns: 1fr;
   }
 
@@ -763,6 +808,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
+<<<<<<< HEAD
   .choice-grid {
     grid-template-columns: 1fr;
   }
@@ -771,6 +817,8 @@ footer {
     grid-template-columns: 1fr;
   }
 
+=======
+>>>>>>> f758b48fae8c6e00673d5565f0557aa89be74b5f
   .source-columns {
     columns: 1;
   }
