@@ -24,8 +24,8 @@ const stages = {
     date: "Government action",
     title: "How did policymakers respond?",
     what:
-      "Policymakers turned pressure into action. Congress passed the TAKE IT DOWN Act, the President used executive orders and the AI Action Plan, states passed AI laws, and courts interpreted copyright disputes for training AI.",
-    who: "Congress, the President, federal agencies, state governments, and courts all became policymakers in different parts of AI policy.",
+      "Policymakers turned pressure into action. Congress usually directly answers to constituents and interest groups, the executive branch implements policies and sets its own agenda, states pass laws based on their own constituents/problems, and courts interpret disputes.",
+    who: "Congress, the President, federal agencies, state governments, and courts all became policymakers in different parts of AI policy with things like the TAKE IT DOWN Act,AI Action Plan, and the court's Anthropic ruling.",
     institution: "Policymakers use more formal powers than other groups like legislation, executive action, bureaucratic discretion, and judicial interpretation.",
     tension: "Government action was not consistent. Certain issues like deepfake abuse got clearer policy, while broader conflicts over copyright, civil rights, state power, and innovation stayed contested, and executive orders even furthered AI development."
   }
@@ -171,11 +171,11 @@ const gameQuestions = [
   },
   {
     prompt: "What was the court decision during Anthropic's copyright case?",
-    answer: "Courts",
+    answer: "Training copyrighted books was fair use",
     concept: "Policymaking Quiz",
-    choices: ["Courts", "Congress", "FTC", "President", "State government", "Tech company"],
+    choices: ["Training copyrighted books was fair use", "AI companies can never use copyrighted works", "The FTC had to approve the model", "State AI laws were unconstitutional", "Congress had already banned AI training", "The case had nothing to do with copyright"],
     explanation:
-      "Courts shaped the Anthropic copyright dispute by interpreting copyright law and fair use. Judicial decisions can change the policy environment."
+      "The court found that training on copyrighted books could be fair use, while separate questions about pirated copies still created legal risk."
   },
   {
     prompt: "Which state passed a bill for whistleblower protection in AI development?",
