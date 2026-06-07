@@ -24,8 +24,8 @@ html {
 body {
   margin: 0;
   background:
-    linear-gradient(rgba(247, 243, 235, 0.86), rgba(247, 243, 235, 0.9)),
-    url("assets/page-background.png") center top / cover fixed;
+    linear-gradient(rgba(247, 243, 235, 0), rgba(247, 243, 235, 0)),
+    url("assets/page-background.png?v=2") center top / cover fixed;
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -220,6 +220,16 @@ button {
 .outcome-section,
 .sources-section {
   padding: clamp(54px, 8vw, 96px) clamp(18px, 5vw, 72px);
+}
+
+.cycle-section,
+.timeline-section,
+.conflict-section,
+.actors-section,
+.sources-section {
+  background:
+    linear-gradient(rgba(247, 243, 235, 0), rgba(247, 243, 235, 0)),
+    url("assets/page-background.png?v=2") center / cover;
 }
 
 .briefing-band {
@@ -461,8 +471,8 @@ button {
 .game-section,
 .outcome-section {
   background:
-    linear-gradient(rgba(234, 244, 241, 0.86), rgba(234, 244, 241, 0.9)),
-    url("assets/student-policy-background.png") center / cover;
+    linear-gradient(rgba(234, 244, 241, 0), rgba(234, 244, 241, 0)),
+    url("assets/student-policy-background.png?v=2") center / cover;
   backdrop-filter: blur(2px);
 }
 
