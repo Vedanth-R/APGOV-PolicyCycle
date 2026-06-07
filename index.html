@@ -27,10 +27,10 @@
       <img src="assets/policy-room-hero.png" alt="Illustrated AI policy room with a glowing policy cycle table, agency screens, courthouse columns, and legislative papers.">
       <div class="hero-overlay"></div>
       <div class="hero-copy">
-        <p class="kicker">Past-year case study - May 2025 to May 2026</p>
+        <p class="kicker">Senior year case study - May 2025 to May 2026</p>
         <h1 id="hero-title">How AI Regulation Moved Through the Policymaking Cycle</h1>
         <p>
-          Track how AI became a public problem, how leaders proposed solutions, which institutions carried them out, where courts and states fought back, and what changed for the people.
+          We made this site to explore the proposed solutions to AI, which institutions carried them out, where courts and states fought back, and what ultimately changed for the people.
         </p>
         <div class="hero-actions">
           <a class="primary-action" href="#cycle">Enter the policymaking cycle</a>
@@ -46,7 +46,7 @@
 
     <section id="cycle" class="cycle-section" aria-labelledby="cycle-title">
       <div class="section-heading">
-        <p class="kicker">Interactive control room</p>
+        <p class="kicker">Interactive policymaking cycle</p>
         <h2 id="cycle-title">Click Through the Policymaking Cycle</h2>
         <p>This version tracks how people, linkage institutions, and policymakers turned AI harms and opportunities into policy action.</p>
       </div>
@@ -58,7 +58,7 @@
           <button class="cycle-node policymakers" data-stage="policymakers"><span>3</span>Policymakers</button>
           <div class="cycle-core">
             <span>AI</span>
-            <strong>Policy</strong>
+            <strong>Policymaking</strong>
             <small>Cycle</small>
           </div>
         </div>
@@ -79,7 +79,7 @@
               <p id="stageWho"></p>
             </div>
             <div>
-              <h4>AP Gov connection</h4>
+              <h4>Strategies Used</h4>
               <p id="stageInstitution"></p>
             </div>
             <div>
@@ -112,7 +112,7 @@
       <div class="section-heading">
         <p class="kicker">Civics simulation</p>
         <h2 id="game-title">Choose the Policymaker</h2>
-        <p>Read the event, decide who responded first, then see why that institution fits the AP Gov concept.</p>
+        <p>Read the event and decide which institution of the policymaking cycle was responsible.</p>
       </div>
       <div class="game-board">
         <article class="question-card">
@@ -121,14 +121,7 @@
             <span id="questionConcept">Agenda setting</span>
           </div>
           <h3 id="questionPrompt"></h3>
-          <div class="choice-grid" aria-label="Policymaker choices">
-            <button class="choice" data-choice="Congress">Congress</button>
-            <button class="choice" data-choice="President">President</button>
-            <button class="choice" data-choice="FTC">FTC</button>
-            <button class="choice" data-choice="State government">State government</button>
-            <button class="choice" data-choice="Courts">Courts</button>
-            <button class="choice" data-choice="Tech company">Tech company</button>
-          </div>
+          <div id="choiceGrid" class="choice-grid" aria-label="Quiz answer choices"></div>
           <div id="gameFeedback" class="game-feedback" aria-live="polite"></div>
           <button id="nextQuestion" class="primary-action game-next" type="button">Next scenario</button>
         </article>
@@ -247,16 +240,12 @@
       </div>
       <div class="outcome-grid">
         <article>
-          <h3>Changed</h3>
-          <p>Federal AI policy moved toward acceleration, procurement, infrastructure, standards, and a narrower set of targeted harms.</p>
+          <h3>What Changed for People</h3>
+          <p>AI policy became more targeted toward real harms people could identify. The TAKE IT DOWN Act connects directly to victims of deepfake abuse by requiring platforms to remove nonconsensual intimate images, including AI-generated ones. Copyright fights connect to writers, musicians, actors, and Hollywood studios because AI companies may train models on books, scripts, voices, performances, and artwork. State laws like California SB 53 connect to consumers by pushing transparency around powerful AI systems.</p>
         </article>
         <article>
-          <h3>Carried Out</h3>
-          <p>Agencies began turning executive priorities into memos, compliance plans, standards work, and platform-removal enforcement.</p>
-        </article>
-        <article>
-          <h3>Contested</h3>
-          <p>State authority, copyright liability, speech concerns, civil-rights safeguards, and AI model neutrality all remained live fights.</p>
+          <h3>What It Means for Students</h3>
+          <p>For students, AI policy is not just about tech companies. It affects how schools define cheating, how teachers use AI detectors, how students learn with tutoring tools, and what skills matter in future jobs. The unresolved conflict is that AI can help students brainstorm, study, code, and write, but schools also have to protect privacy, fairness, original work, and equal access. The policy question for students is not whether AI disappears, but how rules can make it useful without letting it replace learning.</p>
         </article>
       </div>
     </section>
@@ -268,7 +257,14 @@
         <p>Copy this placeholder link and duplicate it as many times as you need.</p>
       </div>
       <div class="source-columns">
-        <a href="https://example.com">Author or Organization. "Title of Page." Website Name, Date Published, URL.</a>
+        <a href="https://www.federalregister.gov/documents/full_text/html/2025/01/31/2025-02172.html">National Archives and Records Administration. "Executive Order 14179: Removing Barriers to American Leadership in Artificial Intelligence." Federal Register, 31 Jan. 2025.</a>
+        <a href="https://www.whitehouse.gov/articles/2025/07/white-house-unveils-americas-ai-action-plan/">The White House. "White House Unveils America's AI Action Plan." The White House, 23 July 2025.</a>
+        <a href="https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf">Office of Management and Budget. "M-25-21: Accelerating Federal Use of AI through Innovation, Governance, and Public Trust." The White House, 2025.</a>
+        <a href="https://www.ftc.gov/business-guidance/blog/2026/05/take-it-down-act-enforcement-starts-now-what-know-about-ftc-tida">Federal Trade Commission. "Take It Down Act Enforcement Starts Now: What to Know about the FTC and TIDA." FTC, May 2026.</a>
+        <a href="https://www.gov.ca.gov/2025/09/29/governor-newsom-signs-sb-53-advancing-californias-world-leading-artificial-intelligence-industry/">Office of Governor Gavin Newsom. "Governor Newsom Signs SB 53, Advancing California's World-Leading Artificial Intelligence Industry." Governor of California, 29 Sept. 2025.</a>
+        <a href="https://www.nist.gov/artificial-intelligence">National Institute of Standards and Technology. "Artificial Intelligence." NIST, U.S. Department of Commerce.</a>
+        <a href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf">U.S. Copyright Office. "Copyright and Artificial Intelligence, Part 3: Generative AI Training." U.S. Copyright Office, 2025.</a>
+        <a href="https://www.goodwinlaw.com/en/insights/publications/2025/06/alerts-practices-aiml-district-court-issues-ai-fair-use-decision">Goodwin Procter LLP. "District Court Issues AI Fair Use Decision: Using Copyrighted Works to Train AI Models Is Fair Use, but Using Pirated Copies to Build a Central Library Is Not." Goodwin, 25 June 2025.</a>
       </div>
     </section>
   </main>

@@ -4,18 +4,18 @@ const stages = {
     date: "Public problem",
     title: "How did people make AI a political issue?",
     what:
-      "People experience the problem first and make it politically visible. AI became important because regular users, victims of deepfake abuse, creators, workers, parents, and consumers felt real consequences.",
-    who: "Victims pushed attention toward deepfake harms. Authors and artists objected to training data practices. Workers and consumers raised concerns about bias, privacy, jobs, and safety.",
-    institution: "Public opinion, voting, protest, testimony, lawsuits, and contacting representatives are how people push issues into the policymaking cycle.",
-    tension: "People did not agree on one definition of the problem: some wanted protection from AI harms, while others worried strict rules would slow innovation."
+      "People experience the problem first and make it politically visible. AI became important because regular users, victims of deepfake abuse, social media creators, workers, and just consumers in general were the main users who saw problems.",
+    who: "Victims of deepfakes drew attention to the topic. Authors and artists objected to training data practices related to copyrighted work. Consumers raised concerns about AI bias, privacy, jobs, and safety.",
+    institution: "Public opinion, voting, protests, testimony, lawsuits, and grassroots contacting representatives are how people push issues into the policymaking cycle.",
+    tension: "People did not agree on one definition of the problem: some wanted protection from AI harms (for exammple authors), while others wanted innovation (tech company workers/researchers)."
   },
   linkage: {
     label: "Linkage Institutions",
     date: "Problem to government",
     title: "How did linkage institutions connect people to policymakers?",
     what:
-      "Linkage institutions organized public pressure and translated it into demands government could act on. Media coverage, interest groups, parties, campaigns, and tech advocacy groups framed AI as a policy issue.",
-    who: "Civil-liberties groups, victim advocates, creator organizations, technology companies, state officials, think tanks, and news media all shaped the debate.",
+      "Linkage institutions connect people to the government by increasing pressure. Media, interest groups, parties, and companies helped influence AI policy.",
+    who: "In the AI world, civil liberty organizations (ACLU), artist/writer unions (Writers Guild of America), and victim advocacy groups, and AI companies helped push the issue of AI policy.",
     institution: "Linkage institutions connect people to policymakers by setting agendas, lobbying, filing lawsuits, publishing research, funding campaigns, and influencing public opinion.",
     tension: "Different groups pushed different frames: innovation race, consumer protection, civil rights, creator rights, national security, and free speech."
   },
@@ -24,10 +24,10 @@ const stages = {
     date: "Government action",
     title: "How did policymakers respond?",
     what:
-      "Policymakers turned pressure into action. Congress passed the TAKE IT DOWN Act, the President used executive orders and the AI Action Plan, agencies implemented guidance, states passed AI laws, and courts interpreted copyright and speech disputes.",
-    who: "Congress, the President, federal agencies, state governments, and courts all became policymakers in different parts of the AI regulation fight.",
-    institution: "Policymakers use formal powers: legislation, executive action, bureaucratic implementation, state law, enforcement, and judicial interpretation.",
-    tension: "Government action was uneven: targeted harms like deepfake abuse got clearer policy, while broader conflicts over copyright, civil rights, state power, and innovation stayed contested."
+      "Policymakers turned pressure into action. Congress passed the TAKE IT DOWN Act, the President used executive orders and the AI Action Plan, states passed AI laws, and courts interpreted copyright disputes for training AI.",
+    who: "Congress, the President, federal agencies, state governments, and courts all became policymakers in different parts of AI policy.",
+    institution: "Policymakers use more formal powers than other groups like legislation, executive action, bureaucratic discretion, and judicial interpretation.",
+    tension: "Government action was not consistent. Certain issues like deepfake abuse got clearer policy, while broader conflicts over copyright, civil rights, state power, and innovation stayed contested, and executive orders even furthered AI development."
   }
 };
 
@@ -36,43 +36,43 @@ const timeline = [
     date: "May 19, 2025",
     tag: "Congress",
     title: "TAKE IT DOWN Act signed",
-    text: "Congress and the President adopted a targeted federal response to nonconsensual intimate imagery, including AI-generated deepfakes, and required covered platforms to remove reported content."
+    text: "Both Congress and the President placed certain regulations on AI to make sexually explicit AI deepfake images illegal."
   },
   {
     date: "June 23, 2025",
     tag: "Courts",
     title: "Anthropic fair-use ruling",
-    text: "A federal court found that training on lawfully acquired books could be fair use, while questions about pirated copies and storage remained a major liability issue."
+    text: "A federal court ruled that training on lawfully aquired books was fair use, but storing/pirating those texts was against copyright rules."
   },
   {
     date: "July 23, 2025",
-    tag: "Federal",
+    tag: "Executive",
     title: "America's AI Action Plan released",
-    text: "The White House announced a federal strategy organized around accelerating innovation, building AI infrastructure, and leading internationally."
+    text: "The White House announced a federal strategy which aimed to accelerating innovation and increase infrastructure development with companies like Nvidia and Oracle."
   },
   {
     date: "Sept. 29, 2025",
     tag: "State",
     title: "California SB 53 signed",
-    text: "California adopted frontier AI transparency and whistleblower protections, becoming a central state-level example of safety-focused AI regulation."
+    text: "California passed a law that contained transparency and whistleblower protections, which was one of the first major state AI policies."
   },
   {
     date: "Dec. 11, 2025",
-    tag: "Federal",
+    tag: "Executive",
     title: "National AI framework order",
-    text: "The White House directed federal action toward a uniform national AI framework and scrutiny of state laws seen as conflicting with federal AI priorities."
+    text: "The White House created a plan towards a uniform national AI framework which also included scrutiny of state laws which conflicted with the federal approach."
   },
   {
     date: "2025-2026",
     tag: "Agency",
     title: "OMB, NIST, FTC implementation",
-    text: "Federal agencies translated broad AI goals into procurement rules, governance memos, standards work, compliance plans, and enforcement deadlines."
+    text: "Federal agencies translated broad AI goals into governance memos (Like the OMB's AI implementation guidelines) and specific regulations (like the FTC's enforcement against misleading AI claims) using their power of oversight."
   },
   {
     date: "May 19, 2026",
     tag: "Agency",
     title: "FTC TAKE IT DOWN enforcement begins",
-    text: "The FTC reminded online platforms of their compliance obligations as the statutory removal and enforcement regime became active."
+    text: "The FTC began actually enforcing online platforms on their obligations to remove nonconsentual deepfakes within 48 hours."
   }
 ];
 
@@ -138,56 +138,62 @@ filterButtons.forEach((button) => {
 
 const gameQuestions = [
   {
-    prompt: "A federal law targets nonconsensual intimate deepfakes and requires platforms to remove reported content. Who responded first?",
-    answer: "Congress",
-    concept: "Legislative process",
+    prompt: "Which Constitutional concept justified Congress arguing that state AI laws burden interstate trade?",
+    answer: "Commerce Clause",
+    concept: "Policymaking Quiz",
+    choices: ["Commerce Clause", "Supremacy Clause", "First Amendment", "Due Process Clause", "Equal Protection Clause", "Necessary and Proper Clause"],
     explanation:
-      "Congress responded through lawmaking. The TAKE IT DOWN Act became a statute because lawmakers could agree on a targeted harm even while broader AI regulation stayed contested."
+      "The Commerce Clause gives Congress power over interstate commerce, which matters when state AI rules affect companies and users across state lines."
   },
   {
-    prompt: "The federal government releases a broad strategy to accelerate AI innovation, infrastructure, and global leadership. Who responded first?",
-    answer: "President",
-    concept: "Executive agenda setting",
+    prompt: "A state law requiring political ads to disclose when they use AI would likely raise questions about what constitutional principle?",
+    answer: "First Amendment",
+    concept: "Policymaking Quiz",
+    choices: ["First Amendment", "Commerce Clause", "Supremacy Clause", "Fourth Amendment", "Equal Protection Clause", "Due Process Clause"],
     explanation:
-      "The President and White House set the agenda through executive orders and the AI Action Plan, directing agencies toward federal priorities."
+      "Political ad disclosure rules can raise First Amendment questions because they regulate speech, political communication, and campaign messaging."
   },
   {
-    prompt: "Online platforms receive reminders that TAKE IT DOWN Act compliance obligations are becoming enforceable. Who responded first?",
+    prompt: "Who was responsible for enforcing the TAKE IT DOWN Act's 48 hour time limit?",
     answer: "FTC",
-    concept: "Bureaucratic implementation",
+    concept: "Policymaking Quiz",
+    choices: ["FTC", "NIST", "OMB", "Congress", "Supreme Court", "State government"],
     explanation:
-      "The FTC is the agency actor here. Agencies translate statutes into enforcement, guidance, and compliance pressure."
+      "The FTC is the bureaucratic agency responsible for enforcing key parts of the TAKE IT DOWN Act. Agencies turn laws into enforcement."
   },
   {
-    prompt: "California passes a frontier AI transparency law after national rules remain incomplete. Who responded first?",
-    answer: "State government",
-    concept: "Federalism",
+    prompt: "The Authors Guild pushed Congress to protect writers and actors. This is an example of interest groups using what strategy?",
+    answer: "Lobbying",
+    concept: "Policymaking Quiz",
+    choices: ["Lobbying", "Judicial review", "Rulemaking", "Federalism", "Executive order", "Judicial activism"],
     explanation:
-      "State government responded through state law. This is federalism in action: states can act as policy laboratories, but may face federal preemption fights."
+      "Lobbying is when interest groups try to influence policymakers. The Authors Guild used advocacy to push Congress toward stronger protections."
   },
   {
-    prompt: "A judge decides whether using copyrighted books to train an AI model can count as fair use. Who responded first?",
+    prompt: "What was the court decision during Anthropic's copyright case?",
     answer: "Courts",
-    concept: "Judicial interpretation",
+    concept: "Policymaking Quiz",
+    choices: ["Courts", "Congress", "FTC", "President", "State government", "Tech company"],
     explanation:
-      "Courts responded by interpreting copyright law. Judges do not usually write AI policy directly, but their rulings shape what policy means in practice."
+      "Courts shaped the Anthropic copyright dispute by interpreting copyright law and fair use. Judicial decisions can change the policy environment."
   },
   {
-    prompt: "A platform updates its reporting and removal workflow so it can process deepfake takedown requests within a legal deadline. Who responded first?",
-    answer: "Tech company",
-    concept: "Private implementation",
+    prompt: "Which state passed a bill for whistleblower protection in AI development?",
+    answer: "California",
+    concept: "Policymaking Quiz",
+    choices: ["California", "Colorado", "Texas", "New York", "Florida", "Washington"],
     explanation:
-      "A tech company is the front-line actor here. Public policy often depends on private platforms changing their systems after government creates legal obligations."
+      "California passed SB 53, which included transparency and whistleblower protections connected to frontier AI development."
   }
 ];
 
 const questionCounter = document.querySelector("#questionCounter");
 const questionConcept = document.querySelector("#questionConcept");
 const questionPrompt = document.querySelector("#questionPrompt");
+const choiceGrid = document.querySelector("#choiceGrid");
 const gameFeedback = document.querySelector("#gameFeedback");
 const nextQuestion = document.querySelector("#nextQuestion");
 const scoreValue = document.querySelector("#scoreValue");
-const choices = document.querySelectorAll("[data-choice]");
 let currentQuestion = 0;
 let score = 0;
 let answered = 0;
@@ -199,30 +205,32 @@ function renderQuestion() {
   questionPrompt.textContent = question.prompt;
   gameFeedback.textContent = "";
   gameFeedback.className = "game-feedback";
-  choices.forEach((choice) => {
-    choice.disabled = false;
-    choice.classList.remove("correct", "incorrect");
-  });
+  choiceGrid.innerHTML = question.choices
+    .map((choice) => `<button class="choice" data-choice="${choice}">${choice}</button>`)
+    .join("");
 }
 
-choices.forEach((choice) => {
-  choice.addEventListener("click", () => {
-    const question = gameQuestions[currentQuestion];
-    const isCorrect = choice.dataset.choice === question.answer;
-    if (isCorrect) {
-      score += 1;
-      choice.classList.add("correct");
-    } else {
-      choice.classList.add("incorrect");
-      document.querySelector(`[data-choice="${question.answer}"]`).classList.add("correct");
-    }
-    answered += 1;
-    scoreValue.textContent = `${score} / ${answered}`;
-    gameFeedback.classList.add(isCorrect ? "is-correct" : "is-incorrect");
-    gameFeedback.textContent = `${isCorrect ? "Correct." : "Not quite."} ${question.explanation}`;
-    choices.forEach((item) => {
-      item.disabled = true;
-    });
+choiceGrid.addEventListener("click", (event) => {
+  const choice = event.target.closest("[data-choice]");
+  if (!choice || choice.disabled) {
+    return;
+  }
+
+  const question = gameQuestions[currentQuestion];
+  const isCorrect = choice.dataset.choice === question.answer;
+  if (isCorrect) {
+    score += 1;
+    choice.classList.add("correct");
+  } else {
+    choice.classList.add("incorrect");
+    [...choiceGrid.querySelectorAll("[data-choice]")].find((button) => button.dataset.choice === question.answer)?.classList.add("correct");
+  }
+  answered += 1;
+  scoreValue.textContent = `${score} / ${answered}`;
+  gameFeedback.classList.add(isCorrect ? "is-correct" : "is-incorrect");
+  gameFeedback.textContent = `${isCorrect ? "Correct." : "Not quite."} ${question.explanation}`;
+  choiceGrid.querySelectorAll("[data-choice]").forEach((item) => {
+    item.disabled = true;
   });
 });
 

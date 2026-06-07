@@ -588,6 +588,10 @@ button {
   gap: 18px;
 }
 
+.outcome-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .actor-card,
 .outcome-grid article {
   border: 2px solid var(--ink);
