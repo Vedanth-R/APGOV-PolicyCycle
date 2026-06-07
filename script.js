@@ -1,58 +1,33 @@
 const stages = {
-  agenda: {
-    label: "Agenda Setting",
-    date: "May-July 2025",
-    title: "How did AI become important?",
+  people: {
+    label: "People",
+    date: "Public problem",
+    title: "How did people make AI a political issue?",
     what:
-      "AI rose on the agenda because deepfake abuse, copyright lawsuits, federal AI procurement, frontier-model safety, state regulation, and competition with China all became public problems at once.",
-    who: "Victims and families, creators, tech firms, state lawmakers, federal advisers, and journalists pushed AI from a technical issue into a public policy issue.",
-    institution: "Media attention, public pressure, Congress, state legislatures, and the White House all helped define the problem.",
-    tension: "Was AI mainly an innovation race needing fewer barriers, or a fast-moving risk needing enforceable guardrails?",
-    evidence: "Source trail: EO 14179, the White House AI Action Plan, TAKE IT DOWN Act coverage, and state AI bills."
+      "People experience the problem first and make it politically visible. AI became important because regular users, victims of deepfake abuse, creators, workers, parents, and consumers felt real consequences.",
+    who: "Victims pushed attention toward deepfake harms. Authors and artists objected to training data practices. Workers and consumers raised concerns about bias, privacy, jobs, and safety.",
+    institution: "Public opinion, voting, protest, testimony, lawsuits, and contacting representatives are how people push issues into the policymaking cycle.",
+    tension: "People did not agree on one definition of the problem: some wanted protection from AI harms, while others worried strict rules would slow innovation."
   },
-  formulation: {
-    label: "Policy Formulation",
-    date: "Jan-Sept 2025",
-    title: "Who proposed solutions?",
+  linkage: {
+    label: "Linkage Institutions",
+    date: "Problem to government",
+    title: "How did linkage institutions connect people to policymakers?",
     what:
-      "Different institutions proposed different fixes: the White House proposed acceleration and federal coordination, Congress targeted deepfake abuse, agencies wrote guidance, and states proposed transparency and safety duties.",
-    who: "The President, White House AI advisers, members of Congress, OMB, NIST, FTC, Commerce, California, and Colorado all shaped the menu of solutions.",
-    institution: "Executive planning, congressional bill drafting, agency expertise, and state policy experimentation.",
-    tension: "Should the federal government create one national rulebook, or should states experiment with stronger rules while Congress moves slowly?",
-    evidence: "Source trail: AI Action Plan, OMB M-25-21, NIST AI work, California SB 53 materials, and Colorado AI Act reporting."
+      "Linkage institutions organized public pressure and translated it into demands government could act on. Media coverage, interest groups, parties, campaigns, and tech advocacy groups framed AI as a policy issue.",
+    who: "Civil-liberties groups, victim advocates, creator organizations, technology companies, state officials, think tanks, and news media all shaped the debate.",
+    institution: "Linkage institutions connect people to policymakers by setting agendas, lobbying, filing lawsuits, publishing research, funding campaigns, and influencing public opinion.",
+    tension: "Different groups pushed different frames: innovation race, consumer protection, civil rights, creator rights, national security, and free speech."
   },
-  adoption: {
-    label: "Policy Adoption",
-    date: "May-Dec 2025",
-    title: "What institutions adopted policy?",
+  policymakers: {
+    label: "Policymakers",
+    date: "Government action",
+    title: "How did policymakers respond?",
     what:
-      "Congress and the President enacted the TAKE IT DOWN Act, a targeted law against nonconsensual intimate imagery and AI deepfakes. California adopted SB 53, and the White House adopted a national AI framework strategy.",
-    who: "Congress, the President, California's governor and legislature, and White House policy officials.",
-    institution: "Statutes, executive orders, state legislation, and national policy plans.",
-    tension: "The TAKE IT DOWN Act passed because it focused on a specific harm. Broader AI regulation remained harder because it raised bigger fights over innovation, speech, federalism, and industry power.",
-    evidence: "Source trail: White House TAKE IT DOWN Act release, California SB 53 signing notice, and December 2025 national framework fact sheet."
-  },
-  implementation: {
-    label: "Implementation",
-    date: "2025-2026",
-    title: "Who carried it out?",
-    what:
-      "Implementation moved to agencies and regulated platforms: OMB shaped federal AI use, NIST worked on standards, FTC prepared TAKE IT DOWN enforcement, and states planned compliance systems.",
-    who: "OMB, agency Chief AI Officers, FTC, NIST, Commerce, online platforms, state regulators, and state attorneys general.",
-    institution: "Bureaucracy: agency memos, compliance plans, enforcement letters, standards, procurement rules, and platform takedown systems.",
-    tension: "Implementation is where broad goals meet deadlines, definitions, capacity, and legal authority. That is where many AI policies either become real or get narrowed.",
-    evidence: "Source trail: OMB M-25-21, NIST AI page, FTC TAKE IT DOWN enforcement guidance, and agency compliance plans."
-  },
-  evaluation: {
-    label: "Evaluation & Feedback",
-    date: "2025-2026",
-    title: "Was the policy contested?",
-    what:
-      "Courts, agencies, and state-federal clashes created feedback. Copyright cases tested fair use. Civil-liberties groups criticized takedown rules. States resisted federal preemption.",
-    who: "Federal judges, authors, AI companies, civil-liberties groups, state leaders, Congress, and federal agencies.",
-    institution: "District courts, the Copyright Office, FTC enforcement, federalism disputes, and congressional oversight.",
-    tension: "Evaluation is unfinished: the next cycle will likely turn on lawsuits, enforcement outcomes, and whether Congress passes a broader national AI statute.",
-    evidence: "Source trail: U.S. Copyright Office AI report, Anthropic fair-use decision coverage, FTC guidance, and state-federal AI framework disputes."
+      "Policymakers turned pressure into action. Congress passed the TAKE IT DOWN Act, the President used executive orders and the AI Action Plan, agencies implemented guidance, states passed AI laws, and courts interpreted copyright and speech disputes.",
+    who: "Congress, the President, federal agencies, state governments, and courts all became policymakers in different parts of the AI regulation fight.",
+    institution: "Policymakers use formal powers: legislation, executive action, bureaucratic implementation, state law, enforcement, and judicial interpretation.",
+    tension: "Government action was uneven: targeted harms like deepfake abuse got clearer policy, while broader conflicts over copyright, civil rights, state power, and innovation stayed contested."
   }
 };
 
@@ -109,7 +84,6 @@ const stageWhat = document.querySelector("#stageWhat");
 const stageWho = document.querySelector("#stageWho");
 const stageInstitution = document.querySelector("#stageInstitution");
 const stageTension = document.querySelector("#stageTension");
-const stageEvidence = document.querySelector("#stageEvidence");
 
 function renderStage(stageKey) {
   const stage = stages[stageKey];
@@ -120,7 +94,6 @@ function renderStage(stageKey) {
   stageWho.textContent = stage.who;
   stageInstitution.textContent = stage.institution;
   stageTension.textContent = stage.tension;
-  stageEvidence.textContent = stage.evidence;
 
   stageButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.stage === stageKey);
@@ -276,99 +249,6 @@ document.querySelectorAll(".actor-card").forEach((card) => {
   });
 });
 
-const successSlider = document.querySelector("#successSlider");
-const successArgument = document.querySelector("#successArgument");
-const submitVote = document.querySelector("#submitVote");
-const voteStatus = document.querySelector("#voteStatus");
-const voteSummary = document.querySelector("#voteSummary");
-const voteBars = document.querySelector("#voteBars");
-const clearVotes = document.querySelector("#clearVotes");
-const voteStorageKey = "aiPolicySuccessVotes";
-const successArguments = {
-  1: {
-    title: "1 - Failed",
-    text: "This rating argues that the government response was too fragmented to solve the core problems. Deepfakes, copyright, state authority, and civil-rights questions remain unsettled."
-  },
-  2: {
-    title: "2 - Mostly symbolic",
-    text: "This rating argues that leaders signaled concern but left many hard problems to agencies, courts, companies, and future Congresses."
-  },
-  3: {
-    title: "3 - Partial success",
-    text: "I would rate the response a 3 because the government addressed targeted harms like deepfake abuse, but broader conflicts over state power, copyright, civil rights, and free speech remain unresolved."
-  },
-  4: {
-    title: "4 - Effective but contested",
-    text: "This rating argues that the government made real progress through statutes, agency action, and state laws, but the response is still being contested in courts and federalism fights."
-  },
-  5: {
-    title: "5 - Strong success",
-    text: "This rating argues that targeted federal law, agency implementation, and state experimentation together created a strong early AI governance framework."
-  }
-};
-
-function renderSuccessArgument() {
-  const rating = successArguments[successSlider.value];
-  successArgument.innerHTML = `<h3>${rating.title}</h3><p>${rating.text}</p>`;
-}
-
-function getVotes() {
-  const savedVotes = localStorage.getItem(voteStorageKey);
-  return savedVotes ? JSON.parse(savedVotes) : [];
-}
-
-function saveVotes(votes) {
-  localStorage.setItem(voteStorageKey, JSON.stringify(votes));
-}
-
-function renderVoteResults() {
-  const votes = getVotes();
-  const total = votes.length;
-  const counts = [1, 2, 3, 4, 5].map((rating) => votes.filter((vote) => vote === rating).length);
-  const average = total ? (votes.reduce((sum, vote) => sum + vote, 0) / total).toFixed(1) : "0.0";
-
-  voteSummary.textContent = total
-    ? `${total} vote${total === 1 ? "" : "s"} submitted. Class average: ${average} / 5.`
-    : "No votes yet.";
-
-  voteBars.innerHTML = counts
-    .map((count, index) => {
-      const rating = index + 1;
-      const percent = total ? Math.round((count / total) * 100) : 0;
-      return `
-        <div class="vote-row">
-          <span>${rating}</span>
-          <div class="bar-track">
-            <div class="bar-fill" style="width: ${percent}%"></div>
-          </div>
-          <strong>${count}</strong>
-        </div>
-      `;
-    })
-    .join("");
-
-  voteStatus.textContent = total
-    ? `Last saved tally has ${total} vote${total === 1 ? "" : "s"}. Every submit adds another class vote.`
-    : "No votes submitted yet.";
-}
-
-submitVote.addEventListener("click", () => {
-  const votes = getVotes();
-  const rating = Number(successSlider.value);
-  votes.push(rating);
-  saveVotes(votes);
-  renderVoteResults();
-  voteStatus.textContent = `Vote submitted: ${rating}. Total votes: ${votes.length}.`;
-});
-
-clearVotes.addEventListener("click", () => {
-  localStorage.removeItem(voteStorageKey);
-  renderVoteResults();
-});
-
-renderStage("agenda");
+renderStage("people");
 renderTimeline();
 renderQuestion();
-renderSuccessArgument();
-renderVoteResults();
-successSlider.addEventListener("input", renderSuccessArgument);

@@ -179,7 +179,7 @@ h1 {
   right: clamp(18px, 5vw, 72px);
   bottom: 28px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
@@ -234,7 +234,6 @@ button {
 }
 
 .briefing-band span,
-.contest-card span,
 .panel-topline,
 .timeline-card span,
 .score-card span {
@@ -327,11 +326,9 @@ button {
   background: var(--amber);
 }
 
-.cycle-node.agenda { top: 8%; left: 50%; transform: translateX(-50%); }
-.cycle-node.formulation { top: 34%; right: -2%; }
-.cycle-node.adoption { bottom: 7%; right: 13%; }
-.cycle-node.implementation { bottom: 7%; left: 13%; }
-.cycle-node.evaluation { top: 34%; left: -2%; }
+.cycle-node.people { top: 8%; left: 50%; transform: translateX(-50%); }
+.cycle-node.linkage { bottom: 12%; left: 7%; }
+.cycle-node.policymakers { bottom: 12%; right: 7%; }
 
 .cycle-core {
   position: absolute;
@@ -358,8 +355,7 @@ button {
 
 .stage-panel,
 .question-card,
-.score-card,
-.success-meter {
+.score-card {
   border: 3px solid var(--ink);
   background: var(--panel);
   padding: clamp(24px, 4vw, 40px);
@@ -409,17 +405,6 @@ button {
 
 .briefing-screen p {
   margin-bottom: 0;
-}
-
-.contest-card {
-  margin-top: 18px;
-  border-left: 8px solid var(--red);
-  background: #fff1e8;
-  padding: 16px 18px;
-}
-
-.contest-card p {
-  margin: 8px 0 0;
 }
 
 .filter-bar {
@@ -641,111 +626,6 @@ button {
   margin: 8px 0;
 }
 
-.success-meter {
-  margin-top: 22px;
-}
-
-.success-meter label {
-  display: block;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.35rem, 3vw, 2rem);
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-
-.success-meter input {
-  width: 100%;
-  accent-color: var(--teal);
-}
-
-.vote-button {
-  margin: 8px 0 10px;
-  color: var(--ink);
-}
-
-.vote-status {
-  margin: 0 0 16px;
-  color: var(--muted);
-  font-weight: 700;
-}
-
-.meter-labels {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
-  margin: 10px 0 18px;
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
-.success-argument {
-  border-left: 8px solid var(--teal);
-  background: #fffdf7;
-  padding: 16px 18px;
-}
-
-.success-argument h3 {
-  margin: 0 0 8px;
-}
-
-.success-argument p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.vote-results {
-  margin-top: 18px;
-  border: 2px solid var(--ink);
-  background: #fffdf7;
-  padding: 18px;
-}
-
-.result-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  align-items: baseline;
-  margin-bottom: 14px;
-}
-
-.result-header h3 {
-  margin: 0;
-}
-
-.result-header p {
-  margin: 0;
-  color: var(--muted);
-  font-weight: 700;
-}
-
-.vote-bars {
-  display: grid;
-  gap: 10px;
-}
-
-.vote-row {
-  display: grid;
-  grid-template-columns: 24px 1fr 36px;
-  gap: 10px;
-  align-items: center;
-  font-weight: 900;
-}
-
-.bar-track {
-  height: 18px;
-  border: 2px solid var(--ink);
-  background: white;
-}
-
-.bar-fill {
-  height: 100%;
-  min-width: 0;
-  background: var(--teal);
-  transition: width 0.2s ease;
-}
-
 .source-columns {
   columns: 2;
   column-gap: 32px;
@@ -760,26 +640,9 @@ button {
 }
 
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
   padding: 28px clamp(18px, 5vw, 72px);
   background: var(--ink);
   color: white;
-}
-
-.clear-votes {
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  background: transparent;
-  color: rgba(255, 255, 255, 0.46);
-  padding: 8px 10px;
-  font-size: 0.74rem;
-}
-
-.clear-votes:hover {
-  color: white;
-  border-color: white;
 }
 
 @media (max-width: 900px) {
@@ -825,16 +688,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .meter-labels {
-    grid-template-columns: 1fr;
-  }
-
-  .result-header,
-  footer {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
   .source-columns {
     columns: 1;
   }
@@ -849,8 +702,8 @@ footer {
     bottom: 20px;
   }
 
-  .cycle-node.formulation { right: -8%; }
-  .cycle-node.evaluation { left: -8%; }
+  .cycle-node.linkage { left: -4%; }
+  .cycle-node.policymakers { right: -4%; }
 
   .cycle-core {
     inset: 31%;

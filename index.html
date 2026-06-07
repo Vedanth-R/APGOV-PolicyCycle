@@ -18,7 +18,7 @@
       <a href="#game">Game</a>
       <a href="#conflicts">Conflicts</a>
       <a href="#actors">Actors</a>
-      <a href="#sources">Sources</a>
+      <a href="#works-cited">Works Cited</a>
     </nav>
   </header>
 
@@ -38,62 +38,54 @@
         </div>
       </div>
       <div class="stage-dock" aria-label="Clickable policy cycle shortcuts">
-        <button class="stage-chip active" data-stage="agenda">Agenda</button>
-        <button class="stage-chip" data-stage="formulation">Formulation</button>
-        <button class="stage-chip" data-stage="adoption">Adoption</button>
-        <button class="stage-chip" data-stage="implementation">Implementation</button>
-        <button class="stage-chip" data-stage="evaluation">Evaluation</button>
+        <button class="stage-chip active" data-stage="people">People</button>
+        <button class="stage-chip" data-stage="linkage">Linkage Institutions</button>
+        <button class="stage-chip" data-stage="policymakers">Policymakers</button>
       </div>
     </section>
 
     <section id="cycle" class="cycle-section" aria-labelledby="cycle-title">
       <div class="section-heading">
         <p class="kicker">Interactive control room</p>
-        <h2 id="cycle-title">Click on a Stage of the Policymaking Cycle</h2>
-        <p>Each stage updates with what happened, who acted, the institutions involved, and the key tension.</p>
+        <h2 id="cycle-title">Click Through the Policymaking Cycle</h2>
+        <p>This version tracks how people, linkage institutions, and policymakers turned AI harms and opportunities into policy action.</p>
       </div>
 
       <div class="cycle-layout control-room">
         <div class="cycle-wheel" aria-label="Policy cycle stage selector">
-          <button class="cycle-node agenda active" data-stage="agenda"><span>1</span>Agenda</button>
-          <button class="cycle-node formulation" data-stage="formulation"><span>2</span>Formulation</button>
-          <button class="cycle-node adoption" data-stage="adoption"><span>3</span>Adoption</button>
-          <button class="cycle-node implementation" data-stage="implementation"><span>4</span>Implementation</button>
-          <button class="cycle-node evaluation" data-stage="evaluation"><span>5</span>Evaluation</button>
+          <button class="cycle-node people active" data-stage="people"><span>1</span>People</button>
+          <button class="cycle-node linkage" data-stage="linkage"><span>2</span>Linkage Institutions</button>
+          <button class="cycle-node policymakers" data-stage="policymakers"><span>3</span>Policymakers</button>
           <div class="cycle-core">
             <span>AI</span>
-            <strong>Control</strong>
-            <small>Room</small>
+            <strong>Policy</strong>
+            <small>Cycle</small>
           </div>
         </div>
 
         <article class="stage-panel" aria-live="polite">
           <div class="panel-topline">
-            <span id="stageLabel">Agenda Setting</span>
-            <span id="stageDate">May-July 2025</span>
+            <span id="stageLabel">People</span>
+            <span id="stageDate">Public problem</span>
           </div>
-          <h3 id="stageTitle">How did AI become important?</h3>
+          <h3 id="stageTitle">How did people make AI a political issue?</h3>
           <div class="briefing-screen">
             <div>
-              <h4>What happened</h4>
+              <h4>Role in the cycle</h4>
               <p id="stageWhat"></p>
             </div>
             <div>
-              <h4>Who acted</h4>
+              <h4>AI policy example</h4>
               <p id="stageWho"></p>
             </div>
             <div>
-              <h4>Institution involved</h4>
+              <h4>AP Gov connection</h4>
               <p id="stageInstitution"></p>
             </div>
             <div>
-              <h4>Conflict / tension</h4>
+              <h4>Policy tension</h4>
               <p id="stageTension"></p>
             </div>
-          </div>
-          <div class="contest-card">
-            <span>Evidence / source</span>
-            <p id="stageEvidence"></p>
           </div>
         </article>
       </div>
@@ -150,37 +142,37 @@
 
     <section id="conflicts" class="conflict-section" aria-labelledby="conflict-title">
       <div class="section-heading">
-        <p class="kicker">Policy conflict cards</p>
-        <h2 id="conflict-title">Flip the Tensions</h2>
-        <p>Click each card to see a concrete example from the AI policy fight.</p>
+        <p class="kicker">Key Debates in AI Policy</p>
+        <h2 id="conflict-title">Flip the Cards</h2>
+        <p>Click each card to see a debate in the making of AI policy.</p>
       </div>
       <div class="conflict-grid">
         <button class="flip-card" type="button">
           <span class="front">Innovation vs. Safety</span>
-          <span class="back">The AI Action Plan pushed acceleration, while California SB 53 emphasized frontier-model transparency and whistleblower protections.</span>
+          <span class="back">The AI Action Plan was implemented to encourage innovation with AI, but California SB 53 was signed to ensure transparency, protection of whistleblowers, and reporting of safety incidents.</span>
         </button>
         <button class="flip-card" type="button">
           <span class="front">Federal Power vs. State Power</span>
-          <span class="back">The December 2025 national framework order challenged state AI rules that the White House saw as barriers to national AI leadership.</span>
+          <span class="back">In December 2025, an executive order from Trump challenged state AI regulations by threatening funding cuts and and allowing bureacracies to challenge states.</span>
         </button>
         <button class="flip-card" type="button">
           <span class="front">Free Speech vs. Harm Prevention</span>
-          <span class="back">The TAKE IT DOWN Act targeted deepfake abuse, but critics worried fast takedown rules could remove lawful speech.</span>
+          <span class="back">The TAKE IT DOWN Act regulated the use of deepfakes, but critics worried that fast takedown rules could be violating free speech in the process.</span>
         </button>
         <button class="flip-card" type="button">
           <span class="front">Copyright Owners vs. AI Companies</span>
-          <span class="back">Courts and the Copyright Office wrestled with whether AI training is fair use and whether pirated data changes the answer.</span>
+          <span class="back">Courts and the Copyright Office wrestled argued if AI training constitutes fair use and whether using pirated data changes that.</span>
         </button>
         <button class="flip-card" type="button">
           <span class="front">National Security vs. Open AI Development</span>
-          <span class="back">Federal policy promoted U.S. AI leadership and infrastructure while still worrying about model misuse, foreign competition, and security controls.</span>
+          <span class="back">Federal policy promoted U.S. AI leadership and infrastructure, but major issues like corrupt usage, data leakage, and foreign competition became a point of worry.</span>
         </button>
       </div>
     </section>
 
     <section id="actors" class="actors-section" aria-labelledby="actors-title">
       <div class="section-heading">
-        <p class="kicker">Who did what?</p>
+        <p class="kicker">Which branch of government did what?</p>
         <h2 id="actors-title">Institution Dashboard</h2>
         <p>Click on a box to get a breakdown of checks/balances, powers used, and an example of legislation</p>
       </div>
@@ -188,11 +180,11 @@
         <article class="actor-card" tabindex="0">
           <span class="actor-icon">WH</span>
           <h3>White House/President</h3>
-          <p>Set the federal agenda through executive orders, the AI Action Plan, and a push for a international AI dominance.</p>
+          <p>Set the federal agenda through executive orders, the AI Action Plan, and a push for international AI dominance.</p>
           <div class="actor-details">
             <p><strong>Power used:</strong> Executive orders and administrative leadership.</p>
             <p><strong>Example action:</strong> EO 14179 (removing AI barriers) and America's AI Action Plan.</p>
-            <p><strong>Check:</strong>States/courts can challenge executive actions, and Congress can pass conflicting legislation.</p>
+            <p><strong>Check:</strong> States and courts can challenge executive actions, and Congress can pass conflicting legislation.</p>
           </div>
         </article>
         <article class="actor-card" tabindex="0">
@@ -202,7 +194,7 @@
           <div class="actor-details">
             <p><strong>Power used:</strong> Policymaking.</p>
             <p><strong>Example action:</strong> TAKE IT DOWN Act.</p>
-            <p><strong>Check:</strong>Gridlock can limit the scope of legislation and courts/states can challenge policy.</p>
+            <p><strong>Check:</strong> Gridlock can limit the scope of legislation, and courts or states can challenge policy.</p>
           </div>
         </article>
         <article class="actor-card" tabindex="0">
@@ -210,9 +202,9 @@
           <h3>Bureaucracy</h3>
           <p>OMB, NIST, FTC, Commerce, Copyright Office, and other agencies translated broad policy into standards and enforcement.</p>
           <div class="actor-details">
-            <p><strong>Power used:</strong>Bureaucratic discretion/implementation.</p>
+            <p><strong>Power used:</strong> Bureaucratic discretion and implementation.</p>
             <p><strong>Example action:</strong> FTC enforcement of TAKE IT DOWN obligations and OMB AI use guidance.</p>
-            <p><strong>Checks:</strong> Agencies depend on Congress appropriations and support from the President</p>
+            <p><strong>Checks:</strong> Agencies depend on congressional appropriations and support from the President.</p>
           </div>
         </article>
         <article class="actor-card" tabindex="0">
@@ -220,9 +212,9 @@
           <h3>States</h3>
           <p>California, Colorado, and many other states tried to fill gaps with transparency and safety regulations for AI.</p>
           <div class="actor-details">
-            <p><strong>Power used:</strong>Federalism principles and state regulatory authority.</p>
+            <p><strong>Power used:</strong> Federalism principles and state regulatory authority.</p>
             <p><strong>Example action:</strong> California SB 53 and Colorado AI Act implementation planning.</p>
-            <p><strong>Check:</strong>Supremacy Clause limits state authority over federal policy.</p>
+            <p><strong>Check:</strong> The Supremacy Clause limits state authority over federal policy.</p>
           </div>
         </article>
         <article class="actor-card" tabindex="0">
@@ -238,11 +230,11 @@
         <article class="actor-card" tabindex="0">
           <span class="actor-icon">P</span>
           <h3>Public & Interest Groups</h3>
-          <p>Victims, creators, tech firms, civil-liberties groups, labor advocates, and state leaders pushed different problem definitions and solutions.</p>
+          <p>Victims, social media creators, tech firms, civil-liberties groups, labor advocates, and state leaders pushed for different approaches.</p>
           <div class="actor-details">
-            <p><strong>Power used:</strong> Lobbying, public pressure, litigation, and expertise.</p>
-            <p><strong>Example action:</strong> Victim advocacy helped move deepfake legislation; industry groups pushed innovation arguments.</p>
-            <p><strong>Limitation:</strong> Unequal resources affect whose voice reaches policymakers.</p>
+            <p><strong>Power used:</strong> Lobbying, public pressure, and litigation.</p>
+            <p><strong>Example action:</strong> Victim advocacy helped push deepfake legislation, and industry groups pushed for innovation approaches.</p>
+            <p><strong>Limitation:</strong> Unequal resources affect whose voice reaches policymakers, especially with AI companies dominating super PACs.</p>
           </div>
         </article>
       </div>
@@ -267,52 +259,22 @@
           <p>State authority, copyright liability, speech concerns, civil-rights safeguards, and AI model neutrality all remained live fights.</p>
         </article>
       </div>
-      <div class="success-meter">
-        <label for="successSlider">How successful was the government response?</label>
-        <input id="successSlider" type="range" min="1" max="5" value="3" step="1">
-        <div class="meter-labels" aria-hidden="true">
-          <span>1 Failed</span>
-          <span>2 Symbolic</span>
-          <span>3 Partial</span>
-          <span>4 Contested</span>
-          <span>5 Strong</span>
-        </div>
-        <button id="submitVote" class="primary-action vote-button" type="button">Submit vote</button>
-        <p id="voteStatus" class="vote-status" aria-live="polite">No votes submitted yet.</p>
-        <article id="successArgument" class="success-argument" aria-live="polite"></article>
-        <div class="vote-results" aria-live="polite">
-          <div class="result-header">
-            <h3>Class Tally</h3>
-            <p id="voteSummary">No votes yet.</p>
-          </div>
-          <div id="voteBars" class="vote-bars"></div>
-        </div>
-      </div>
     </section>
 
-    <section id="sources" class="sources-section" aria-labelledby="sources-title">
+    <section id="works-cited" class="sources-section" aria-labelledby="works-cited-title">
       <div class="section-heading">
-        <p class="kicker">Source trail</p>
-        <h2 id="sources-title">Sources Used for This First Draft</h2>
+        <p class="kicker">Bottom tab</p>
+        <h2 id="works-cited-title">Works Cited</h2>
+        <p>Copy this placeholder link and duplicate it as many times as you need.</p>
       </div>
       <div class="source-columns">
-        <a href="https://www.whitehouse.gov/releases/2025/07/white-house-unveils-americas-ai-action-plan/">White House: America's AI Action Plan</a>
-        <a href="https://www.federalregister.gov/documents/full_text/html/2025/01/31/2025-02172.html">Federal Register: EO 14179</a>
-        <a href="https://www.whitehouse.gov/fact-sheets/2025/12/fact-sheet-president-donald-j-trump-ensures-a-national-policy-framework-for-artificial-intelligence/">White House: National AI Policy Framework</a>
-        <a href="https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf">OMB: M-25-21 Federal AI Use</a>
-        <a href="https://www.nist.gov/artificial-intelligence">NIST: Artificial Intelligence</a>
-        <a href="https://www.whitehouse.gov/releases/2025/05/icymi-president-trump-signs-take-it-down-act-into-law/">White House: TAKE IT DOWN Act</a>
-        <a href="https://www.ftc.gov/business-guidance/blog/2026/05/take-it-down-act-enforcement-starts-now-what-know-about-ftc-tida">FTC: TAKE IT DOWN Act Enforcement</a>
-        <a href="https://www.gov.ca.gov/2025/09/29/governor-newsom-signs-sb-53-advancing-californias-world-leading-artificial-intelligence-industry/">California Governor: SB 53</a>
-        <a href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf">U.S. Copyright Office: AI Training Report</a>
-        <a href="https://www.goodwinlaw.com/en/insights/publications/2025/06/alerts-practices-aiml-district-court-issues-ai-fair-use-decision">Goodwin summary: Anthropic fair-use decision</a>
+        <a href="https://example.com">Author or Organization. "Title of Page." Website Name, Date Published, URL.</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>First interactive draft for AP Government. Last updated May 2026.</p>
-    <button id="clearVotes" class="clear-votes" type="button">Clear votes</button>
+    <p>AP GOV Final project website. Made by Vedanth and Cedric,May 2026.</p>
   </footer>
 
   <script src="script.js"></script>
