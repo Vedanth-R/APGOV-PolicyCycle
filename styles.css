@@ -214,6 +214,7 @@ button {
 .briefing-band,
 .cycle-section,
 .timeline-section,
+.case-study-section,
 .game-section,
 .conflict-section,
 .actors-section,
@@ -224,6 +225,7 @@ button {
 
 .cycle-section,
 .timeline-section,
+.case-study-section,
 .conflict-section,
 .actors-section,
 .sources-section {
@@ -476,6 +478,54 @@ button {
   backdrop-filter: blur(2px);
 }
 
+.case-study-layout {
+  display: grid;
+  grid-template-columns: minmax(380px, 1.15fr) minmax(320px, 0.85fr);
+  gap: clamp(24px, 5vw, 56px);
+  align-items: center;
+}
+
+.screenshot-frame,
+.case-study-card {
+  border: 3px solid var(--ink);
+  background: rgba(255, 250, 240, 0.96);
+  box-shadow: 10px 10px 0 var(--ink);
+}
+
+.screenshot-frame {
+  margin: 0;
+  padding: 10px;
+}
+
+.case-study-image {
+  display: block;
+  width: 100%;
+  border: 2px solid rgba(16, 32, 39, 0.14);
+  background: white;
+  object-fit: contain;
+}
+
+.screenshot-frame figcaption {
+  margin-top: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 0.92rem;
+}
+
+.case-study-card {
+  padding: clamp(24px, 4vw, 38px);
+}
+
+.case-study-card h3 {
+  margin-top: 0;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+.case-study-card p {
+  color: var(--muted);
+  line-height: 1.68;
+}
+
 .choice-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -690,6 +740,7 @@ footer {
   .stage-dock,
   .briefing-band,
   .cycle-layout,
+  .case-study-layout,
   .game-board,
   .briefing-screen,
   .actor-grid,
